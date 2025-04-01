@@ -146,6 +146,7 @@ library
     Miso.Html
     Miso.Html.Element
     Miso.Html.Event
+    Miso.Html.Event.Raw
     Miso.Html.Property
     Miso.Html.Types
     Miso.Internal
@@ -181,10 +182,12 @@ library
     base          < 5,
     bytestring    < 0.13,
     containers    < 0.9,
+    extra         < 1.8,
     http-api-data < 0.9,
     http-media    < 0.9,
     http-types    < 0.13,
     jsaddle       < 0.10,
+    jsaddle-dom   < 0.10,
     mtl           < 2.4,
     network-uri   < 2.7,
     servant       < 0.21,

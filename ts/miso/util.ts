@@ -19,4 +19,31 @@ export function setBodyComponent(componentId: string): void {
   document.body.setAttribute('data-component-id', componentId);
 }
 
-export const version: string = '1.9.0.0';
+export function hasPrototypeTagged(name: string, value: object): boolean {
+  if (typeof window !== 'undefined') {
+    const type = window[name];
+
+    if (type && (value instanceof type)) {
+      return true;
+    }
+  }
+
+  let target = value;
+
+  while (target) {
+    const proto = Object.getPrototypeOf(target);
+    const constructorName = proto.constructor.name;
+    
+    if (constructorName === name) {
+      return true;
+    } else if (constructorName === 'Object') {
+      return false;
+    }
+
+    target = proto;
+  }
+
+  return false;
+}
+
+export const version : string = '1.9.0.0';

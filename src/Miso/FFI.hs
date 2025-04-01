@@ -50,6 +50,7 @@ module Miso.FFI
    , reload
    , getComponent
    , setBodyComponent
+   , hasPrototypeTagged
    ) where
 -----------------------------------------------------------------------------
 import           Control.Concurrent (ThreadId, forkIO)
@@ -368,3 +369,9 @@ setBodyComponent name = do
   moduleMiso <- jsg "miso"
   void $ moduleMiso # "setBodyComponent" $ [component]
 -----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+-- | Returns whether a JS object has a prototype tagged with a given name
+hasPrototypeTagged :: JSVal -> MisoString -> JSM Bool
+hasPrototypeTagged x name = 
+  fromJSValUnchecked 
+    =<< jsg2 "hasPrototypeTagged" (toJSString name) x
