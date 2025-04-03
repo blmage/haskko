@@ -93,7 +93,7 @@ executable tests
   import:
     js-only-tests, cpp
   default-language:
-    Haskell2010
+    GHC2024
   main-is:
     Main.hs
   ghcjs-options:
@@ -128,7 +128,7 @@ library
     client,
     cpp
   default-language:
-    Haskell2010
+    GHC2024
   other-modules:
     Miso.Concurrent
     Miso.Delegate

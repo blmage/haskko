@@ -1,6 +1,6 @@
-{-# LANGUAGE RecordWildCards #-}
 -----------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE RecordWildCards   #-}
 -----------------------------------------------------------------------------
 -- |
 -- Module      :  Miso.Delegate

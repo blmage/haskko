@@ -1,10 +1,5 @@
 -----------------------------------------------------------------------------
-{-# LANGUAGE GeneralizedNewtypeDeriving #-}
-{-# LANGUAGE OverloadedStrings          #-}
-{-# LANGUAGE RankNTypes                 #-}
-{-# LANGUAGE RecordWildCards            #-}
-{-# LANGUAGE ScopedTypeVariables        #-}
-{-# LANGUAGE TypeApplications           #-}
+{-# LANGUAGE OverloadedStrings #-}
 -----------------------------------------------------------------------------
 -- |
 -- Module      :  Miso.Html.Event.Raw
@@ -59,7 +54,7 @@ import           JSDOM.Event (Event)
 import           JSDOM.FocusEvent (FocusEvent)
 import           JSDOM.KeyboardEvent (KeyboardEvent)
 import           JSDOM.MouseEvent (MouseEvent)
-import           Language.Javascript.JSaddle hiding (val)
+import           Language.Javascript.JSaddle
 -----------------------------------------------------------------------------
 import           Miso.Event
 import           Miso.FFI (set, asyncCallback1, consoleError, hasPrototypeTagged)
@@ -221,7 +216,7 @@ newtype DragEvent = DragEvent {toMouseEvent :: MouseEvent}
   deriving (PFromJSVal, PToJSVal, ToJSVal)
 -----------------------------------------------------------------------------
 instance FromJSVal DragEvent where
-  fromJSVal val = fmap DragEvent <$> fromJSVal val
+  fromJSVal e = fmap DragEvent <$> fromJSVal e
 -----------------------------------------------------------------------------
 instance TaggedEvent DragEvent where
   tagOf _ = "DragEvent"

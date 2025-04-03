@@ -1,8 +1,5 @@
 -----------------------------------------------------------------------------
-{-# LANGUAGE LambdaCase                 #-}
-{-# LANGUAGE DeriveGeneric              #-}
 {-# LANGUAGE OverloadedStrings          #-}
-{-# LANGUAGE GeneralizedNewtypeDeriving #-}
 -----------------------------------------------------------------------------
 -- |
 -- Module      :  Miso.Event.Types

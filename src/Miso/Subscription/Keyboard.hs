@@ -1,6 +1,5 @@
 -----------------------------------------------------------------------------
-{-# LANGUAGE BangPatterns #-}
-{-# LANGUAGE OverloadedStrings   #-}
+{-# LANGUAGE OverloadedStrings #-}
 -----------------------------------------------------------------------------
 -- |
 -- Module      :  Miso.Subscription.Keyboard
@@ -101,4 +100,3 @@ keyboardSub f sink = do
             let !new = S.empty
             in (new, new)
           sink (f newKeys)
------------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 -----------------------------------------------------------------------------
-{-# LANGUAGE OverloadedStrings          #-}
-{-# LANGUAGE CPP                        #-}
+{-# LANGUAGE CPP               #-}
+{-# LANGUAGE OverloadedStrings #-}
 -----------------------------------------------------------------------------
 -- |
 -- Module      :  Miso.Subscription.WebSocket

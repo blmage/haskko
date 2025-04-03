@@ -1,13 +1,8 @@
 -----------------------------------------------------------------------------
 {-# LANGUAGE ExistentialQuantification #-}
-{-# LANGUAGE ScopedTypeVariables       #-}
 {-# LANGUAGE OverloadedStrings         #-}
-{-# LANGUAGE FlexibleInstances         #-}
-{-# LANGUAGE TypeApplications          #-}
 {-# LANGUAGE RecordWildCards           #-}
-{-# LANGUAGE DeriveFunctor             #-}
 {-# LANGUAGE TypeFamilies              #-}
-{-# LANGUAGE DataKinds                 #-}
 -----------------------------------------------------------------------------
 -- |
 -- Module      :  Miso.Types
